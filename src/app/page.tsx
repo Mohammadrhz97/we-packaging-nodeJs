@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Video />
+      <Video videoUrl="/video/WeVideo.mp4" />
       <About />
       <SwipperProductCards />
       <Gallery />

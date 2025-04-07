@@ -3,6 +3,7 @@ import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 import "./globals.css";
+import AosInit from "./aos-init";
 
 const markaziText = Markazi_Text({
   subsets: ["arabic"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={`${markaziText.variable} antialiased`}>
         <Navbar />
         <Background />
+        <AosInit />
         {children}
         <Footer />
       </body>
