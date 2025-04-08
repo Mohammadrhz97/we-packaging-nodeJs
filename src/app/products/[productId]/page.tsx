@@ -5,11 +5,13 @@ import ProductPageClient from "./ProductPageClient";
 export async function generateMetadata({
   params,
 }: {
-  // Type definition for the params object which contains the productId
   params: { productId: string };
 }) {
+  // Await the params before accessing the productId
+  const { productId } = await params;
+
   // Search for the product based on the provided productId
-  const product = ServiceData.find((item) => item.id === params.productId);
+  const product = ServiceData.find((item) => item.id === productId);
 
   // If the product is not found, return default metadata
   if (!product) {
@@ -27,12 +29,14 @@ export async function generateMetadata({
 }
 
 // The main ProductPage component that accepts the productId from the params
-export default function ProductPage({
+export default async function ProductPage({
   params,
 }: {
-  // Type definition for the params object which contains the productId
   params: { productId: string };
 }) {
+  // Await the params before using productId
+  const { productId } = await params;
+
   // Render the ProductPageClient component, passing the productId as a prop
-  return <ProductPageClient productId={params.productId} />;
+  return <ProductPageClient productId={productId} />;
 }

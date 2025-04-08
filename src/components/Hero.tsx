@@ -10,10 +10,10 @@ import P1 from "../../public/1.png"; // Main hero image
 
 const Hero: React.FC = () => {
   return (
-    <div className="bg-black/30 w-screen">
-      <div className="mx-auto h-lvh flex justify-center items-center flex-col-reverse lg:flex-row">
-        {/* Text and animation section */}
-        <div className="absolute lg:relative text-white md:min-w-[500px] max-w-[500px] lg:mr-[-200px] h-full flex items-center justify-center flex-col text-3xl z-10">
+    <div className="bg-black/30 w-screen ">
+      <div className="w-full relative mx-auto h-lvh flex justify-center lg:justify-evenly items-center flex-col-reverse md:flex-row">
+        {/* Text, animation, bulb image, and button section */}
+        <div className="absolute md:relative md:top-0 top-[40%] text-white md:min-w-[500px] max-w-[500px]  flex items-center justify-center flex-col text-3xl z-10">
           {/* Typing animation text */}
           <div className="relative top-[120px] z-20">
             <TypeAnimation
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Blurred background bulb image for decoration */}
-          <div className="mt-[-50%] opacity-50">
+          <div className="mt-[-50%] opacity-50 w-[400px] md:w-auto">
             <Image
               src={Blb1}
               alt="bulb"
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             />
           </div>
 
-          {/* button leading to products page */}
+          {/* Button leading to products page */}
           <Link href="/products">
             <button className="absolute backdrop-blur-sm flex items-center text-white text-lg gap-4 border border-black border-opacity-60 border-r-2 border-b-2 p-2 px-7 z-30 cursor-pointer top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <span>
@@ -54,14 +54,16 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Main image */}
-        <Image
-          src={P1}
-          alt="1"
-          width={900}
-          height={900}
-          className="h-full max-w-auto object-contain lg:mr-16 mr-56 ml-24 sm:ml-0 z-0"
-          priority
-        />
+        <div className=" md:w-[700px] w-[400px] md:mr-16 pt-48 md:pt-0 absolute md:top-0 top-[-20%] md:relative">
+          <Image
+            src={P1}
+            alt="1"
+            width={800}
+            height={800}
+            className="object-contain"
+            priority
+          />
+        </div>
       </div>
     </div>
   );
