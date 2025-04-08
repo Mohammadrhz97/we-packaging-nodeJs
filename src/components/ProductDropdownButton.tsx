@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from "react"; // Importing ReactNode type for child components
 import { MdKeyboardArrowLeft } from "react-icons/md"; // Importing left arrow icon
 

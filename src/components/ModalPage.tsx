@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5"; // Close icon
 import { MdOutlineLocalPhone } from "react-icons/md";
