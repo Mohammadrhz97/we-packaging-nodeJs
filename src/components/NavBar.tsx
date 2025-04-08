@@ -118,6 +118,7 @@ function Navbar() {
             height={18}
             className="w-12 h-12 object-contain p-1"
             priority
+            unoptimized
           />
         </button>
 

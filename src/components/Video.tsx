@@ -15,7 +15,8 @@ const Video: React.FC = () => {
           width={940}
           height={500}
           className="object-cover "
-          priority // loads this image first for performance
+          priority
+          unoptimized
         />{" "}
       </div>
     </div>
