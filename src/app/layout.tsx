@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="fa" dir="ltr">
       <body className={`${markaziText.variable} antialiased`}>
         <Background />
         <Navbar />

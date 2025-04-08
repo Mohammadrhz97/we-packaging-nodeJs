@@ -102,7 +102,7 @@ export default function ProductPageClient({
 
       {/* Product description */}
       <div
-        data-aos="fade-up"
+        data-aos="md:fade-up"
         className="max-w-full mt-4 text-center mx-5 bg-white/10 p-5 rounded-lg text-white text-xl"
       >
         <h1 className="text-right font-semibold text-2xl">

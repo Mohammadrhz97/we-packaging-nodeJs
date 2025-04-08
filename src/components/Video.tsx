@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import WeVideo from "../../public/video/WeVideo.gif";
 
 const Video: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Video: React.FC = () => {
       </p>
       <div className="w-full max-w-[940px] rounded-2xl overflow-hidden">
         <Image
-          src="/video/WeVideo.mp4"
+          src={WeVideo}
           alt="GIF"
           width={940}
           height={500}
