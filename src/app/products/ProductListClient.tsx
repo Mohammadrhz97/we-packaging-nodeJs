@@ -1,6 +1,8 @@
 "use client";
 import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from "../../constant/constants.index";
+import Link from "next/link";
+
 
 export default function ProductListClient() {
   return (
@@ -10,7 +12,7 @@ export default function ProductListClient() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-7 max-w-full justify-items-center place-content-between mx-5 bg-white/10 p-5 rounded-lg">
         {ServiceData.map((item) => (
-          <div
+         <Link href={`/products/${item.id}`}> <div
             key={item.id}
             className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[350px] w-[300px] overflow-hidden cursor-pointer"
           >
@@ -31,7 +33,7 @@ export default function ProductListClient() {
               </p>
             </div>
             <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
-          </div>
+          </div></Link>
         ))}
       </div>
     </div>

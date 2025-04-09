@@ -17,7 +17,7 @@ const Video: React.FC = () => {
           className="object-cover "
           priority
           unoptimized
-        />{" "}
+        />
       </div>
     </div>
   );
