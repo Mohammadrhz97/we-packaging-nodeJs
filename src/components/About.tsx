@@ -13,7 +13,6 @@ const About: React.FC = () => {
           alt="GIF"
           fill // makes the image fill the parent container
           className="object-cover blur-sm opacity-85"
-          priority // loads this image first for performance
         />
 
         {/* Overlay container for the text box */}
@@ -21,11 +20,14 @@ const About: React.FC = () => {
           {/* Semi-transparent black background text box */}
           <div className="max-w-[600px] text-center bg-black/35 p-5 rounded-lg">
             {/* Section title */}
-            <p className="text-white font-bold text-right text-xl font-IBMPlex mb-9">
+            <p className="text-white font-[Morabba-Bold] text-right text-xl font-IBMPlex mb-9">
               درباره ما
             </p>
             {/* Descriptive paragraph */}
-            <p className="text-white text-right">
+            <p
+              className="text-white text-justify font-[Morabba-Regular]"
+              dir="rtl"
+            >
               شروع به کار مجموعه چاپ و بسته بندی های لوکس حمزه در تاریخ ۱۳۸۷
               توسط برادران حمزه به عنوان سرمایه گذاران و مدیران مجموعه می باشد.
               تمام پکیج های طراحی و چاپ شده این مجموعه زیر نظر بهترین و مجرب

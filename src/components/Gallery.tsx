@@ -43,7 +43,7 @@ const Gallery: React.FC = () => {
     <>
       {/* Title section */}
       <div className="flex justify-center mb-6">
-        <p className="w-1/3 text-center mb-8 bg-white/10 p-3 rounded-2xl text-white md:text-xl text-sm">
+        <p className="w-2/3 text-center mb-8 text-2xl bg-white/10 p-3 rounded-2xl text-white md:text-xl ">
           گالری تصاویر
         </p>
       </div>

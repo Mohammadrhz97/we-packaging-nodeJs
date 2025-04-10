@@ -9,6 +9,7 @@ import Calling from "../../public/Calling.gif";
 import ProductsDropdown from "./ProductsDropdown";
 import Link from "next/link";
 import ModalPage from "./ModalPage";
+import weLogo from "../../public/weLogo.png";
 
 function Navbar() {
   // Initialize state variables
@@ -64,14 +65,23 @@ function Navbar() {
   return (
     <div className="relative">
       {/* Navbar Container */}
-      <div className="text-white flex justify-between items-center mx-auto h-14 px-4 text-1 fixed w-full backdrop-blur-sm border-b border-gray-800 z-40">
+      <div
+        style={{ fontFamily: "Morabba-Regular" }}
+        className="text-white flex justify-between items-center mx-auto h-14 px-4 text-1 fixed w-full backdrop-blur-sm border-b border-gray-800 z-40"
+      >
+        {" "}
         {/* Brand Logo */}
         <Link href="/">
-          <h1 className="text-3xl font-bold primary-color ml-4 cursor-pointer">
-            WE.
-          </h1>
+          <div className="w-16">
+            <Image
+              src={weLogo}
+              height={0}
+              width={0}
+              alt="logo"
+              className="w-auto h-auto"
+            />
+          </div>
         </Link>
-
         {/* Desktop Navigation Menu */}
         <ul className="hidden md:flex md:mx-auto font-markazi text-lg">
           <li className="p-5">
@@ -89,7 +99,11 @@ function Navbar() {
             </span>
 
             {/* Dropdown container with ref */}
-            <div ref={dropdownRef} onMouseLeave={() => setOpen(false)}>
+            <div
+              ref={dropdownRef}
+              onClick={() => setOpen(false)}
+              onMouseLeave={() => setOpen(false)}
+            >
               {open && (
                 <div className="absolute top-full left-0 w-64 z-50">
                   <ProductsDropdown /> {/* Render dropdown content */}
@@ -105,7 +119,6 @@ function Navbar() {
             <Link href="/about">درباره ما</Link>
           </li>
         </ul>
-
         {/* Calling Button */}
         <button
           onClick={() => setIsModalOpen(true)} // Open modal on button click
@@ -117,11 +130,9 @@ function Navbar() {
             width={18}
             height={18}
             className="w-12 h-12 object-contain p-1"
-            priority
             unoptimized
           />
         </button>
-
         {/* Mobile Menu Toggle */}
         <div onClick={() => setNav(!nav)} className="block md:hidden">
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -186,7 +197,7 @@ function Navbar() {
                     {label}
                   </Link>
                 )}
-                <span className="absolute bottom-0 left-1/2 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                <span className="absolute bottom-0  h-[1px] bg-gray-600 transition-all duration-300 w-full left-0"></span>
               </li>
             );
           })}

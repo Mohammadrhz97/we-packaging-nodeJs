@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
               }}
               speed={20}
               sequence={[`Designing Dreams,\nPackaging Perfection`, 2000, ""]}
-              className="font-Playwrite font-bold leading-loose text-white mb-10"
+              className="font-[Angel] text-4xl font-bold leading-loose text-white mb-10"
               repeat={Infinity}
             />
           </div>

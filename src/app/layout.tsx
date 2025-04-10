@@ -1,21 +1,8 @@
-"use client";
-
-import { Markazi_Text } from "next/font/google";
-import dynamic from "next/dynamic";
 import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import AosInit from "./aos-init";
-
-const Background = dynamic(() => import("@/components/Background"), {
-  ssr: false,
-});
-
-const markaziText = Markazi_Text({
-  subsets: ["arabic"],
-  variable: "--font-markazi-text",
-  weight: "500",
-});
+import Background from "@/components/Background";
 
 export default function RootLayout({
   children,
@@ -24,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="ltr">
-      <body className={`${markaziText.variable} antialiased`}>
+      <body className={`antialiased`} suppressHydrationWarning>
         <Background />
         <Navbar />
         <AosInit />

@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import ModalPage from "./ModalPage"; // Modal component for contact
+import ModalPage from "./ModalPage";
+import Image from "next/image";
+import weLogo from "../../public/weLogo.png";
 
 const Footer: React.FC = () => {
   // State to control visibility of the modal
@@ -19,7 +21,15 @@ const Footer: React.FC = () => {
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-              WE.
+              <div className="w-16">
+                <Image
+                  src={weLogo}
+                  height={0}
+                  width={0}
+                  alt="logo"
+                  className="w-auto h-auto"
+                />
+              </div>
             </span>
           </Link>
 

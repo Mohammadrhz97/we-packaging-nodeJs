@@ -30,7 +30,7 @@ export default function ProductPageClient({
       {/* Product title section */}
       <div
         data-aos="fade-down"
-        className="max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white text-4xl"
+        className=" font-[Morabba-Bold] text-2xl  max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white"
       >
         <h1>{product.title}</h1>
       </div>
@@ -74,8 +74,10 @@ export default function ProductPageClient({
                   className="flex items-start justify-between gap-2 transition duration-200 ease-in-out hover:scale-105 mb-3"
                 >
                   <span className="flex-1">
-                    <p className="text-xl font-semibold mb-1">:{title}</p>
-                    <p className="mr-2 font-light text-[15px]">{description}</p>
+                    <p className="text-lg md:text-xl font-[Morabba-SemiBold] mb-1">
+                      :{title}
+                    </p>
+                    <p className="mr-2 font-[Morabba-Light]">{description}</p>
                   </span>
                   <CiCirclePlus
                     width={30}
@@ -105,13 +107,19 @@ export default function ProductPageClient({
         data-aos="md:fade-up"
         className="max-w-full mt-4 text-center mx-5 bg-white/10 p-5 rounded-lg text-white text-xl"
       >
-        <h1 className="text-right font-semibold text-2xl">
+        <h1 className="text-right font-[Morabba-Bold] text-xl md:text-2xl">
           {product?.description?.title}
         </h1>
-        <p className="text-justify text font-thin mt-4 text-[16px]" dir="rtl">
+        <p
+          className="text-justify font-[Morabba-UltraLight] md:font-[Morabba-Light] mt-4"
+          dir="rtl"
+        >
           {product?.description?.firstParagraph}
         </p>
-        <p className="text-justify ltr font-thin mt-2 text-[16px]" dir="rtl">
+        <p
+          className="text-justify font-[Morabba-UltraLight] md:font-[Morabba-Light] mt-2"
+          dir="rtl"
+        >
           {product?.description?.secondParagraph}
         </p>
       </div>

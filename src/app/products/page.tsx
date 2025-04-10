@@ -1,4 +1,3 @@
-// app/products/page.tsx (SERVER COMPONENT)
 import { ServiceData } from "@/constant/constants.index";
 import ProductListClient from "./ProductListClient";
 
@@ -12,8 +11,7 @@ export async function generateMetadata() {
 
 export default function ProductsPage() {
   return (
-    <div className="max-w-[1024px] pt-36 mx-auto">
-      {/* Your static content here */}
+    <div className="max-w-[1024px] pt-16 mx-auto">
       <ProductListClient />
     </div>
   );
