@@ -176,6 +176,12 @@ function Navbar() {
                     {/* Dropdown items (conditionally rendered) */}
                     {mobileDropdownOpen && (
                       <ul className="mt-2 pr-3 space-y-1 text-white text-base ">
+                        <Link
+                          href={`/products`}
+                          className="block border-b border-b-gray-500 pb-2 pt-2"
+                        >
+                          همه محصولات
+                        </Link>
                         {ServiceData.map((item) => (
                           <li key={item.id} onClick={() => setNav(!nav)}>
                             <Link

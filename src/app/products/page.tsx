@@ -1,3 +1,4 @@
+"use client";
 import { ServiceData } from "@/constant/constants.index";
 import ProductListClient from "./ProductListClient";
 

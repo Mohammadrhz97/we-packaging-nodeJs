@@ -26,7 +26,7 @@ export default function ProductPageClient({
   }
 
   return (
-    <div className="max-w-[1024px] pt-36 mx-auto">
+    <div className="max-w-[1024px] pt-16 mx-auto">
       {/* Product title section */}
       <div
         data-aos="fade-down"
@@ -48,6 +48,7 @@ export default function ProductPageClient({
               alt={product.id}
               width={300}
               height={300}
+              className="h-auto w-auto"
               priority
             />
           </div>

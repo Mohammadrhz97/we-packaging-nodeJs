@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Calling from "../../public/Calling.gif";
 import ModalPage from "./ModalPage";

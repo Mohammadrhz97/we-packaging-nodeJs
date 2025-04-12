@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ProductListClient() {
   return (
-    <div className="max-w-[1024px] pt-12 mx-auto">
+    <div className="max-w-[1024px] mx-auto">
       <div className="max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white text-4xl">
         <h1>محصولات</h1>
       </div>
