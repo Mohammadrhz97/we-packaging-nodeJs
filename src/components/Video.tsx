@@ -5,7 +5,7 @@ import WeVideo from "../../public/video/WeVideo.gif";
 const Video: React.FC = () => {
   return (
     <div className="max-w-full p-5 bg-white/5 flex justify-center items-center flex-col">
-      <p className="text-center w-2/3 font-[AlteHaasGroteskBold] mb-8 bg-white/10 p-3 rounded-2xl text-white font-semibold md:text-xl text-sm md:tracking-[.8rem] tracking-[.5rem]">
+      <p className="text-center font-[AlteHaasGroteskBold] mb-8 bg-white/10 p-3 rounded-2xl text-white font-semibold md:text-xl text-sm md:tracking-[.8rem] tracking-[.2rem]">
         . . . WE OUT OF SPACE . . .
       </p>
       <div className="w-full max-w-[940px] rounded-2xl overflow-hidden">

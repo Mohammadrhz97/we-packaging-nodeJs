@@ -144,7 +144,7 @@ function Navbar() {
         ref={navRef}
         className={
           nav
-            ? "text-white md:hidden fixed h-full right-0 top-0 w-[50%]  bg-[#202121]/35 backdrop-blur-lg ease-in-out duration-500 z-20"
+            ? "text-white md:hidden fixed h-full right-0 top-0 w-[60%]  bg-[#202121]/35 backdrop-blur-lg ease-in-out duration-500 z-20"
             : "fixed right-[-100%] ease-out duration-100"
         }
       >
@@ -160,14 +160,14 @@ function Navbar() {
             return (
               <li
                 key={href}
-                className="group relative p-2 overflow-hidden cursor-pointer w-full"
+                className="group text-sm relative p-2 overflow-hidden cursor-pointer w-full"
                 ref={isProducts ? mobileDropdownRef : null} // Add ref for products dropdown
               >
                 {isProducts ? (
                   <>
                     <button
                       onClick={() => setMobileDropdownOpen((prev) => !prev)} // Toggle mobile dropdown for products
-                      className="flex items-center text-white w-full justify-end gap-1"
+                      className="flex items-center text-white w-full justify-end gap-1 text-sm"
                     >
                       <SlArrowDown className="w-3 h-3 text-white mr-2" />
                       {label}
@@ -175,7 +175,7 @@ function Navbar() {
 
                     {/* Dropdown items (conditionally rendered) */}
                     {mobileDropdownOpen && (
-                      <ul className="mt-2 pr-3 space-y-1 text-white text-base ">
+                      <ul className="mt-2 pr-3 space-y-1 text-white text-sm ">
                         <Link
                           href={`/products`}
                           className="block border-b border-b-gray-500 pb-2 pt-2"
