@@ -144,11 +144,11 @@ function Navbar() {
         ref={navRef}
         className={
           nav
-            ? "text-white md:hidden fixed h-full right-0 top-0 w-[60%]  bg-[#202121]/35 backdrop-blur-lg ease-in-out duration-500 z-20"
+            ? "text-white md:hidden fixed h-full right-0 top-0 w-[60%] bg-[#202121]/35 backdrop-blur-lg ease-in-out duration-500 z-20"
             : "fixed right-[-100%] ease-out duration-100"
         }
       >
-        <ul className="p-8 text-xl mt-12 text-right space-y-2">
+        <ul className="p-8 text-xl mt-12 text-right space-y-2 ">
           {/* Navigation Links */}
           {[
             { label: "صفحه اصلی", href: "/" },
@@ -199,6 +199,7 @@ function Navbar() {
                   <Link
                     href={href}
                     className="flex items-center text-white w-full justify-end gap-1"
+                    onClick={() => setNav(false)}
                   >
                     {label}
                   </Link>

@@ -12,7 +12,7 @@ function ProductsDropdown() {
   const remainingItems = data.slice(5);
 
   return (
-    <div className="flex fixed top-[60px] right-0 left-0 w-[480px] h-60 z-20 mx-auto rounded-xl shadow-slate-300 bg-black/50 backdrop-blur-lg">
+    <div className="flex fixed top-[60px] right-0 left-0 w-[480px] h-60 z-20 mx-auto rounded-xl bg-black/90 backdrop-blur-2xl">
       {/* First dropdown list */}
       <ul className="text-gray-300 fixed right-0 text-base/10 p-5">
         {firstSixItems.map((item) => (

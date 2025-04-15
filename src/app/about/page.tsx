@@ -19,7 +19,7 @@ export default function ProductListClient() {
   return (
     <div className="max-w-[1024px] mx-auto pt-20">
       <div className="max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white text-4xl">
-        <h1>درباره ما</h1>
+        <h1>درباره بنیان‌گذاران وی</h1>
       </div>
 
       <div className="max-w-full mt-6 mx-5 bg-white/10 p-5 rounded-lg flex justify-center">
@@ -41,24 +41,46 @@ export default function ProductListClient() {
         </div>
       </div>
 
-      <div className="mt-6 max-w-full justify-items-center place-content-between mx-5 bg-white/10 p-5 rounded-lg">
+      <div className="mt-6 max-w-full items-center justify-end mx-5 bg-white/10 p-5 rounded-lg">
         <p
-          className="text-white text-justify font-[Morabba-Regular] md:text-xl"
+          className="text-white text-right mb-4 font-[Morabba-Regular] text-xl md:text-2xl"
           dir="rtl"
         >
-          ما در مجموعه‌ی خود تلاش می‌کنیم تا با تکیه بر تخصص، تجربه و نوآوری،
-          خدماتی متمایز و با کیفیت در حوزه‌ی [حوزه فعالیت شما] ارائه دهیم. هدف
-          ما، ایجاد تجربه‌ای بی‌نقص برای مشتریان و پاسخ‌گویی به نیازهای آن‌ها با
-          راهکارهای خلاقانه و متناسب با استانداردهای روز دنیاست.
+          <strong>سها جوریان و امیر حمزه</strong>
         </p>
         <p
-          className="text-white text-justify font-[Morabba-Regular] md:text-xl mt-6"
+          className="text-white text-justify font-[Morabba-Regular] md:text-lg"
           dir="rtl"
         >
-          تعهد ما به صداقت، کیفیت و مشتری‌مداری، پایه و اساس تمامی فعالیت‌های
-          ماست. ما باور داریم که موفقیت واقعی در گرو رضایت کامل مشتریان است و
-          برای رسیدن به این هدف، همواره در حال ارتقاء خدمات، گسترش دانش فنی و
-          استفاده از تکنولوژی‌های نوین هستیم.{" "}
+          سها و امیر، بنیان‌گذاران وی، دو نگاه متفاوت اما مکمل‌اند. یکی با ذهنی
+          مفهومی و نگاهی عمیق به هویت انسان؛ و دیگری با رویکردی تحلیلی،
+          ساختارمند و آینده‌نگر.
+        </p>
+        <p
+          className="text-white text-justify font-[Morabba-Regular] md:text-lg mt-4"
+          dir="rtl"
+        >
+          سها جوریان، طراح هویت بصری و استراتژیست برند، باور دارد برند چیزی
+          فراتر از یک لوگو یا تصویر است؛ برند، امتداد درونی‌ترین بخش وجود توست.
+          سها با درک عمیقی از لایه‌های هویتی انسان، به کسب‌وکارها کمک می‌کند
+          خودِ واقعی‌شان را زندگی کنند؛ و این «بودن» را در برندشان جاری کنند.
+        </p>
+        <p
+          className="text-white text-justify font-[Morabba-Regular] md:text-lg mt-4"
+          dir="rtl"
+        >
+          امیر حمزه، تحلیل‌گر و طراح ساختارهای برند، با ذهنی دقیق و آینده‌نگر به
+          برند به‌عنوان یک سیستم زنده نگاه می‌کند؛ سیستمی که باید در زمان رشد
+          کند، با آینده گفتگو داشته باشد، و در عین ریشه داشتن، روبه‌جلو حرکت
+          کند. او پایه‌های فکری و سیستمی وی را بر اساس پایداری، تحول و نگاه به
+          فردا بنا کرده است.
+        </p>
+        <p
+          className="text-white text-right font-[Morabba-Regular] md:text-lg mt-4"
+          dir="rtl"
+        >
+          آن‌ها وی را خلق کردند، نه فقط برای طراحی، بلکه برای ساختن برندهایی که
+          زنده‌اند. برندهایی که از درون روشن می‌شوند، و آینده را روشن می‌کنند.
         </p>
       </div>
 
