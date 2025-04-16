@@ -94,11 +94,11 @@ export default function ProductListClient() {
           </p>
           <div className="flex items-center justify-end gap-2 mt-8">
             <a
-              href="tel:+989011710116"
+              href="tel:+989196017454"
               className="flex items-center justify-between px-4 hover:scale-105  border border-gray-800 rounded-2xl cursor-pointer  transition"
             >
               <span className="text-white text-right font-[Morabba-Regular]">
-                ۰۹۸۹۰۱۱۷۱۰۱۱۶
+                ۰۹۱۹۶۰۱۷۴۵۴
               </span>
             </a>
             <span
@@ -131,7 +131,7 @@ export default function ProductListClient() {
           </div>
           <div className="flex items-center justify-end gap-2 mt-8">
             <a
-              href="https://wa.me/09011710116"
+              href="https://wa.me/+989196017454"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer gap-2 px-2 transition"

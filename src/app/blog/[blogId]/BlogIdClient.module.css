@@ -1,0 +1,23 @@
+.blogId h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 16px;
+  text-align: right;
+}
+.blogId h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 16px;
+  text-align: right;
+}
+.blogId h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 16px;
+  text-align: right;
+}
+.blogId p {
+  font-size: 16px;
+  font-weight: 200;
+  text-align: justify;
+}

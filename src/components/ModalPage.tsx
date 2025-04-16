@@ -81,11 +81,11 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
             <p className="text-white text-right text-md">:شماره تماس</p>
             <div className="flex justify-evenly flex-wrap">
               <a
-                href="tel:+989011710116"
+                href="tel:+989196017454"
                 className="flex items-center justify-between px-4 p-1 hover:scale-105 w-40 mt-4 border border-gray-800 rounded-2xl cursor-pointer gap-3 transition"
               >
                 <MdOutlineLocalPhone className="w-5 h-5 text-white" />
-                <span className="text-white text-lg">۰۹۸۹۰۱۱۷۱۰۱۱۶</span>
+                <span className="text-white text-lg">۰۹۱۹۶۰۱۷۴۵۴</span>
               </a>
               <a
                 href="tel:021555555"
@@ -103,7 +103,7 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
             <div className="flex justify-evenly flex-wrap">
               {/* WhatsApp */}
               <a
-                href="https://wa.me/09011710116"
+                href="https://wa.me/+989196017454"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between px-4 p-1 hover:scale-105 w-40 mt-4 border border-gray-800 rounded-2xl cursor-pointer gap-3 transition"
