@@ -8,12 +8,18 @@ import { BsTelephoneInbound } from "react-icons/bs";
 import { FaWhatsapp, FaTelegramPlane, FaInstagram } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
+import { Metadata } from "next";
 
-// ✅ Dynamically import the MapComponent without SSR
 const MapComponent = dynamic(() => import("@/components/MapComponent"), {
   ssr: false,
   loading: () => <p className="text-white">در حال بارگذاری نقشه...</p>,
 });
+
+export const metadata: Metadata = {
+  title: "درباره ما",
+  description:
+    "با تیمی متخصص و پرانرژی، ما در وی پکیجینگ به ارائه بهترین محصولات با کیفیت و خدمات منحصر به فرد افتخار می‌کنیم. در این صفحه با تاریخچه، ارزش‌ها و ماموریت ما آشنا شوید و ببینید که چگونه می‌توانیم به شما در رسیدن به اهداف‌تان کمک کنیم.",
+};
 
 export default function ProductListClient() {
   return (

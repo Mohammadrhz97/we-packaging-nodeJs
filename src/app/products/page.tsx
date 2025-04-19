@@ -1,13 +1,11 @@
-import { ServiceData } from "@/constant/constants.index";
 import ProductListClient from "./ProductListClient";
+import { Metadata } from "next";
 
-export async function generateMetadata() {
-  const titles = ServiceData.map((item) => item.title).join(" | ");
-  return {
-    title: "محصولات",
-    description: `لیست محصولات: ${titles}`,
-  };
-}
+export const metadata: Metadata = {
+  title: "لیست محصولات",
+  description:
+    "مجموعه‌ای از بهترین و باکیفیت‌ترین محصولات با طراحی‌های نوآورانه و کاربردی. از پکیجینگ و لوازم جانبی تا محصولات خاص، تمامی کالاها با تضمین کیفیت و قیمت رقابتی در دسترس شماست. خرید آسان و مطمئن از فروشگاه ما!",
+};
 
 export default function ProductsPage() {
   return (

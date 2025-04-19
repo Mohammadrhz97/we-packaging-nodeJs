@@ -9,8 +9,9 @@ import Head from "next/head";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Your Site Title",
-  description: "Your site description",
+  title: "WE Packaging",
+  description:
+    "به وی پکیجینگ خوش آمدید! ما ارائه‌دهنده بهترین محصولات و خدمات در زمینه توسعه برند و پکیجینگ هستیم. با خرید از ما، کیفیت و رضایت را تجربه کنید. از مجموعه متنوع محصولات و پیشنهادات ویژه‌مان بازدید کنید.",
 };
 
 export default function RootLayout({

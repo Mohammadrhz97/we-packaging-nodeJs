@@ -1,7 +1,15 @@
 import { BlogContents } from "../../constant/blogContents.index";
+import { Metadata } from "next";
+
 import Image from "next/image";
 import favicon from "../../../public/favicon.png";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "بلاگ",
+  description:
+    "در بلاگ وی پکیجینگ جدیدترین مقالات، نکات و راهنماهای کاربردی را در زمینه پکیجینگ بیابید. ما به شما کمک می‌کنیم تا با به‌روزترین اطلاعات و اخبار، تصمیمات بهتری بگیرید و از تجربیات ما بهره‌مند شوید.",
+};
 
 export default function page() {
   return (

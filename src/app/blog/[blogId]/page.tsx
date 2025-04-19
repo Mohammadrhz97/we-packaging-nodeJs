@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   return {
     title: product?.title || "Product Not Found",
-    description: product?.description || "Product description",
+    description: product?.excerpt,
   };
 }
 
