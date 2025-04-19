@@ -1,19 +1,34 @@
 "use client";
+
+// Import static blog data
 import { BlogContents } from "../../../constant/blogContents.index";
+
+// Next.js image optimization
 import Image from "next/image";
-import styles from "./BlogIdClient.module.css"; // Import the CSS Module file
-import { FaExternalLinkAlt } from "react-icons/fa";
-import Link from "next/link";
-import { BsTelephoneInbound } from "react-icons/bs";
-import { FaWhatsapp, FaTelegramPlane, FaInstagram } from "react-icons/fa";
+
+// CSS Module for local styles
+import styles from "./BlogIdClient.module.css";
+
+// Icons
+import {
+  FaExternalLinkAlt,
+  FaWhatsapp,
+  FaTelegramPlane,
+  FaInstagram,
+} from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
+import { BsTelephoneInbound } from "react-icons/bs";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 
+// Next.js routing
+import Link from "next/link";
+
+// Main functional component that receives a blogId prop
 export default function BlogIdClient({ blogId }: { blogId: string }) {
-  // Find the product based on the provided blogId
+  // Find the blog entry using the blogId
   const blog = BlogContents.find((item) => item.id === blogId) || null;
 
-  // If the product is not found, return a "Product not found" message
+  // Return an error message if the blog isn't found
   if (!blog) {
     return (
       <div className="text-white text-center h-screen flex items-center justify-center pt-20">
@@ -25,21 +40,21 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
   return (
     <>
       <div className="max-w-[1024px] pt-20 mx-auto">
-        {/* Product title section */}
+        {/* Blog title */}
         <div
           data-aos="fade-down"
-          className=" font-[Morabba-Bold] text-2xl  max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white"
+          className="font-[Morabba-Bold] text-2xl max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white"
         >
           <h1>{blog.title}</h1>
         </div>
 
-        {/* Product details and image section */}
+        {/* Blog image and content section */}
         <div className="max-w-full mx-5 mt-4 gap-4">
-          {/* Product image */}
           <div
             data-aos="fade-right"
             className="bg-white/10 p-5 rounded-lg w-full h-full"
           >
+            {/* Blog image with hover zoom effect */}
             <div className="max-w-fit max-h-[500px] overflow-hidden relative rounded-3xl shadow-2xl mx-auto transition duration-200 ease-in-out hover:scale-105">
               <Image
                 src={blog.image}
@@ -50,6 +65,8 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
                 priority
               />
             </div>
+
+            {/* Link to product list */}
             <Link
               href="/products"
               className="flex items-center p-3 transition duration-200 ease-in-out hover:scale-105 w-[280px] md:w-[350px] mt-16 gap-3 mx-auto border border-gray-800 rounded-2xl cursor-pointer"
@@ -59,6 +76,8 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
                 برای مشاهده لیست محصولات کلیک کنید
               </span>
             </Link>
+
+            {/* Blog content rendered from HTML */}
             <div
               className={`mt-4 text-white text text-justify p-5 ${styles.blogId}`}
               dangerouslySetInnerHTML={{ __html: blog.content }}
@@ -67,14 +86,17 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
           </div>
         </div>
 
+        {/* Contact section */}
         <div className="flex flex-col justify-start text-white mx-5 md:mx-auto mt-6 bg-white/10 p-5 rounded-lg md:w-[55%]">
           <p className="text-white text-right font-[Morabba-Bold]" dir="rtl">
             راه های ارتباطی:
           </p>
+
+          {/* Phone */}
           <div className="flex items-center justify-end gap-2 mt-8">
             <a
               href="tel:+989196017454"
-              className="flex items-center justify-between px-4 hover:scale-105  border border-gray-800 rounded-2xl cursor-pointer  transition"
+              className="flex items-center justify-between px-4 hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer transition"
             >
               <span className="text-white text-right font-[Morabba-Regular]">
                 ۰۹۱۹۶۰۱۷۴۵۴
@@ -88,6 +110,8 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
             </span>
             <BsTelephoneInbound />
           </div>
+
+          {/* Instagram */}
           <div className="flex items-center justify-end gap-2 mt-8">
             <a
               href="https://instagram.com/we_packaging"
@@ -108,6 +132,8 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
             </span>
             <FaInstagram />
           </div>
+
+          {/* WhatsApp */}
           <div className="flex items-center justify-end gap-2 mt-8">
             <a
               href="https://wa.me/+989196017454"
@@ -128,6 +154,8 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
             </span>
             <FaWhatsapp />
           </div>
+
+          {/* Telegram */}
           <div className="flex items-center justify-end gap-2 mt-8">
             <a
               href="https://t.me/we_packaging"
@@ -148,6 +176,8 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
             </span>
             <FaTelegramPlane />
           </div>
+
+          {/* Address */}
           <div className="flex items-center justify-end gap-2 mt-8">
             <span
               className="text-white text-right font-[Morabba-Regular]"
@@ -156,7 +186,6 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
               تهران-خیابان نوفل لوشاتو - خیابان رازی - پلاک 27 - طبقه دوم - واحد
               پنج
             </span>
-
             <span
               className="text-white text-right font-[Morabba-Bold]"
               dir="rtl"

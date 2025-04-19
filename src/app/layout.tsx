@@ -24,9 +24,8 @@ export default function RootLayout({
       <Head>
         {/* Add the viewport meta tag directly here */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Google Tag Manager (Head) */}
       </Head>
+      {/* Google Tag Manager (Head) */}
       <Script
         id="gtm-head"
         strategy="afterInteractive"
