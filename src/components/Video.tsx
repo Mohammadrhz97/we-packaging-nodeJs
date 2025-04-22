@@ -12,6 +12,7 @@ const Video: React.FC = () => {
         <Image
           src={WeVideo}
           alt="GIF"
+          layout="responsive"
           width={940}
           height={500}
           className="object-cover max-h-[500] max-w-[940] "
