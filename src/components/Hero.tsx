@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         {/* Text, animation, bulb image, and button section */}
         <div className="absolute md:relative md:top-0 top-[40%] text-white md:min-w-[500px] max-w-[500px]  flex items-center justify-center flex-col text-3xl z-10">
           {/* Typing animation text */}
-          <div className="relative top-[120px] z-20">
+          <div className="relative top-[120px] z-20 w-[350px] h-auto">
             <TypeAnimation
               style={{
                 whiteSpace: "pre-line",

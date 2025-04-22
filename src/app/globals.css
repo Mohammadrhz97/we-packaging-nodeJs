@@ -3,42 +3,52 @@
 @font-face {
   font-family: "Morabba-Regular";
   src: url("/fonts/Morabba-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba-UltraLight";
   src: url("/fonts/Morabba-UltraLight.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba-Light";
   src: url("/fonts/Morabba-Light.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba-SemiBold";
   src: url("/fonts/Morabba-SemiBold.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba-Bold";
   src: url("/fonts/Morabba-Bold.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba-ExtraBold";
   src: url("/fonts/Morabba-ExtraBold.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba-Heavy";
   src: url("/fonts/Morabba-Heavy.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "AlteHaasGroteskBold";
   src: url("/fonts/AlteHaasGroteskBold.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "AlteHaasGroteskRegular";
   src: url("/fonts/AlteHaasGroteskRegular.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Angel";
   src: url("/fonts/Angel.ttf") format("truetype");
+  font-display: swap;
 }
 
 :root {

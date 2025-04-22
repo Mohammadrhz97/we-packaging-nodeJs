@@ -49,7 +49,10 @@ const Gallery: React.FC = () => {
       </div>
 
       {/* Image carousel using react-image-gallery */}
-      <ImageGallery items={images} />
+      <ImageGallery
+        items={images}
+        lazyLoad={true} // Enable lazy loading for the images
+      />
     </>
   );
 };

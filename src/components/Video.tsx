@@ -14,7 +14,7 @@ const Video: React.FC = () => {
           alt="GIF"
           width={940}
           height={500}
-          className="object-cover "
+          className="object-cover h-auto w-auto "
           unoptimized
         />
       </div>
