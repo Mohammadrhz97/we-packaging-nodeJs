@@ -16,7 +16,6 @@ const Video: React.FC = () => {
           height={500}
           className="object-cover max-h-[500] max-w-[940] "
           unoptimized
-          loading="lazy"
         />
       </div>
     </div>
