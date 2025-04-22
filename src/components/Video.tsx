@@ -14,8 +14,9 @@ const Video: React.FC = () => {
           alt="GIF"
           width={940}
           height={500}
-          className="object-cover h-auto w-auto "
+          className="object-cover max-h-[500] max-w-[940] "
           unoptimized
+          loading="lazy"
         />
       </div>
     </div>

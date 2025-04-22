@@ -2,7 +2,7 @@ import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import AosInit from "./aos-init";
-// import Background from "@/components/Background";
+import Background from "@/components/Background";
 import StickyCallIcon from "@/components/StickyCallIcon";
 import { Metadata } from "next";
 import Head from "next/head";
@@ -50,7 +50,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
 
-        {/* <Background /> */}
+        <Background />
         <Navbar />
         <AosInit />
         <StickyCallIcon />
