@@ -1,6 +1,6 @@
 "use client";
-// import Image from "next/image";
-// import WeVideo from "../../public/video/WeVideo.gif";
+import Image from "next/image";
+import WeVideo from "../../public/video/WeVideo.gif";
 
 const Video: React.FC = () => {
   return (
@@ -9,14 +9,14 @@ const Video: React.FC = () => {
         . . . WE OUT OF SPACE . . .
       </p>
       <div className="w-full max-w-[940px] rounded-2xl overflow-hidden">
-        {/* <Image
+        <Image
           src={WeVideo}
           alt="GIF"
           width={940}
           height={500}
           className="object-cover max-h-[500] max-w-[940] "
           unoptimized
-        /> */}
+        />
       </div>
     </div>
   );

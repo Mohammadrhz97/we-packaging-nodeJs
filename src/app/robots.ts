@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
+  const domain = "https://wepackaging.co";
+
   return {
     rules: [
       {
@@ -8,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
+    sitemap: `${domain}/sitemap.xml`,
   };
 }

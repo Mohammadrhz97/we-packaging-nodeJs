@@ -8,34 +8,50 @@ const Gallery: React.FC = () => {
     {
       original: "/MainpageGallery/mg1.jpg",
       thumbnail: "/MainpageGallery/mg1.jpg",
+      originalAlt: "image1",
+      thumbnailAlt: "image1",
     },
     {
       original: "/MainpageGallery/mg2.jpg",
       thumbnail: "/MainpageGallery/mg2.jpg",
+      originalAlt: "image2",
+      thumbnailAlt: "image2",
     },
     {
       original: "/MainpageGallery/mg3.jpg",
       thumbnail: "/MainpageGallery/mg3.jpg",
+      originalAlt: "image3",
+      thumbnailAlt: "image3",
     },
     {
       original: "/MainpageGallery/mg4.jpg",
       thumbnail: "/MainpageGallery/mg4.jpg",
+      originalAlt: "image4",
+      thumbnailAlt: "image4",
     },
     {
       original: "/MainpageGallery/mg5.jpg",
       thumbnail: "/MainpageGallery/mg5.jpg",
+      originalAlt: "image5",
+      thumbnailAlt: "image5",
     },
     {
       original: "/MainpageGallery/mg6.jpg",
       thumbnail: "/MainpageGallery/mg6.jpg",
+      originalAlt: "image6",
+      thumbnailAlt: "image6",
     },
     {
       original: "/MainpageGallery/mg7.jpg",
       thumbnail: "/MainpageGallery/mg7.jpg",
+      originalAlt: "image7",
+      thumbnailAlt: "image7",
     },
     {
       original: "/MainpageGallery/mg8.jpg",
       thumbnail: "/MainpageGallery/mg8.jpg",
+      originalAlt: "image8",
+      thumbnailAlt: "image8",
     },
   ];
 
