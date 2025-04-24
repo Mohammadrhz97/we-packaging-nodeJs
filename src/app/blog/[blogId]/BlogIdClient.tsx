@@ -9,6 +9,9 @@ import Image from "next/image";
 // CSS Module for local styles
 import styles from "./BlogIdClient.module.css";
 
+// Dynamic import to load components lazily on client-side only
+import dynamic from "next/dynamic";
+
 // Icons
 import {
   FaExternalLinkAlt,
@@ -22,6 +25,12 @@ import { HiOutlineOfficeBuilding } from "react-icons/hi";
 
 // Next.js routing
 import Link from "next/link";
+
+// Dynamically importing the MapComponent with SSR disabled
+const MapComponent = dynamic(() => import("@/components/MapComponent"), {
+  ssr: false, // Disable server-side rendering
+  loading: () => <p className="text-white">در حال بارگذاری نقشه...</p>, // Fallback UI while loading
+});
 
 // Main functional component that receives a blogId prop
 export default function BlogIdClient({ blogId }: { blogId: string }) {
@@ -43,25 +52,25 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
         {/* Blog title */}
         <div
           data-aos="fade-down"
-          className="font-[Morabba-Bold] text-2xl max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white"
+          className="font-[Morabba-Bold] text-2xl max-w-full text-center mx-5 bg-white/5 backdrop-blur-xs shadow-[0_0_30px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white"
         >
           <h1>{blog.title}</h1>
         </div>
 
         {/* Blog image and content section */}
-        <div className="max-w-full mx-5 mt-4 gap-4">
+        <div className="max-w-full mx-5 mt-10 gap-4">
           <div
             data-aos="fade-right"
-            className="bg-white/10 p-5 rounded-lg w-full h-full"
+            className="bg-white/5 backdrop-blur-xs shadow-[0_0_30px_rgba(255,255,255,0.15)] p-5 rounded-lg w-full h-full"
           >
             {/* Blog image with hover zoom effect */}
-            <div className="max-w-fit max-h-[500px] overflow-hidden relative rounded-3xl shadow-2xl mx-auto transition duration-200 ease-in-out hover:scale-105">
+            <div className="w-[600px] overflow-hidden relative rounded-3xl shadow-2xl mx-auto transition duration-200 ease-in-out hover:scale-105">
               <Image
                 src={blog.image}
                 alt={blog.id}
-                width={500}
-                height={500}
-                className="h-auto w-auto"
+                width={1400}
+                height={800}
+                className="h-[450px] w-auto"
                 priority
               />
             </div>
@@ -86,113 +95,121 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
           </div>
         </div>
 
-        {/* Contact section */}
-        <div className="flex flex-col justify-start text-white mx-5 md:mx-auto mt-6 bg-white/10 p-5 rounded-lg md:w-[55%]">
-          <p className="text-white text-right font-[Morabba-Bold]" dir="rtl">
-            راه های ارتباطی:
-          </p>
-
-          {/* Phone */}
-          <div className="flex items-center justify-end gap-2 mt-8">
-            <a
-              href="tel:+989196017454"
-              className="flex items-center justify-between px-4 hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer transition"
-            >
-              <span className="text-white text-right font-[Morabba-Regular]">
-                ۰۹۱۹۶۰۱۷۴۵۴
-              </span>
-            </a>
-            <span
-              className="text-white text-right font-[Morabba-Bold]"
-              dir="rtl"
-            >
-              تلفن:
-            </span>
-            <BsTelephoneInbound />
+        {/* Contact info and location map section */}
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          {/* Map showing business location */}
+          <div className="flex justify-center items-center text-white mx-5 mt-6 bg-white/10 p-5 rounded-lg">
+            <MapComponent />
           </div>
 
-          {/* Instagram */}
-          <div className="flex items-center justify-end gap-2 mt-8">
-            <a
-              href="https://instagram.com/we_packaging"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer gap-2 px-2 transition"
-            >
-              <FaLink className="w-5 h-5 text-white" />
-              <span className="text-white font-[Morabba-Regular]">
-                كليك كنید
-              </span>
-            </a>
-            <span
-              className="text-white text-right font-[Morabba-Bold]"
-              dir="rtl"
-            >
-              اينستاگرام:
-            </span>
-            <FaInstagram />
-          </div>
+          {/* Contact details section */}
+          <div className="flex flex-col justify-start text-white mx-5 mt-6 bg-white/10 p-5 rounded-lg">
+            <p className="text-white text-right font-[Morabba-Bold]" dir="rtl">
+              راه های ارتباطی:
+            </p>
 
-          {/* WhatsApp */}
-          <div className="flex items-center justify-end gap-2 mt-8">
-            <a
-              href="https://wa.me/+989196017454"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer gap-2 px-2 transition"
-            >
-              <FaLink className="w-5 h-5 text-white" />
-              <span className="text-white font-[Morabba-Regular]">
-                كليك كنید
+            {/* Phone */}
+            <div className="flex items-center justify-end gap-2 mt-8">
+              <a
+                href="tel:+989196017454"
+                className="flex items-center justify-between px-4 hover:scale-105  border border-gray-800 rounded-2xl cursor-pointer  transition"
+              >
+                <span className="text-white text-right font-[Morabba-Regular]">
+                  ۰۹۱۹۶۰۱۷۴۵۴
+                </span>
+              </a>
+              <span
+                className="text-white text-right font-[Morabba-Bold]"
+                dir="rtl"
+              >
+                تلفن:
               </span>
-            </a>
-            <span
-              className="text-white text-right font-[Morabba-Bold]"
-              dir="rtl"
-            >
-              واتس اپ:
-            </span>
-            <FaWhatsapp />
-          </div>
+              <BsTelephoneInbound />
+            </div>
 
-          {/* Telegram */}
-          <div className="flex items-center justify-end gap-2 mt-8">
-            <a
-              href="https://t.me/we_packaging"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer gap-2 px-2 transition"
-            >
-              <FaLink className="w-5 h-5 text-white" />
-              <span className="text-white font-[Morabba-Regular]">
-                كليك كنید
+            {/* Instagram */}
+            <div className="flex items-center justify-end gap-2 mt-8">
+              <a
+                href="https://instagram.com/we_packaging"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer gap-2 px-2 transition"
+              >
+                <FaLink className="w-5 h-5 text-white" />
+                <span className="text-white font-[Morabba-Regular]">
+                  كليك كنید
+                </span>
+              </a>
+              <span
+                className="text-white text-right font-[Morabba-Bold]"
+                dir="rtl"
+              >
+                اينستاگرام:
               </span>
-            </a>
-            <span
-              className="text-white text-right font-[Morabba-Bold]"
-              dir="rtl"
-            >
-              تلگرام:
-            </span>
-            <FaTelegramPlane />
-          </div>
+              <FaInstagram />
+            </div>
 
-          {/* Address */}
-          <div className="flex items-center justify-end gap-2 mt-8">
-            <span
-              className="text-white text-right font-[Morabba-Regular]"
-              dir="rtl"
-            >
-              تهران-خیابان نوفل لوشاتو - خیابان رازی - پلاک 27 - طبقه دوم - واحد
-              پنج
-            </span>
-            <span
-              className="text-white text-right font-[Morabba-Bold]"
-              dir="rtl"
-            >
-              آدرس:
-            </span>
-            <HiOutlineOfficeBuilding />
+            {/* WhatsApp */}
+            <div className="flex items-center justify-end gap-2 mt-8">
+              <a
+                href="https://wa.me/+989196017454"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer gap-2 px-2 transition"
+              >
+                <FaLink className="w-5 h-5 text-white" />
+                <span className="text-white font-[Morabba-Regular]">
+                  كليك كنید
+                </span>
+              </a>
+              <span
+                className="text-white text-right font-[Morabba-Bold]"
+                dir="rtl"
+              >
+                واتس اپ:
+              </span>
+              <FaWhatsapp />
+            </div>
+
+            {/* Telegram */}
+            <div className="flex items-center justify-end gap-2 mt-8">
+              <a
+                href="https://t.me/we_packaging"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between hover:scale-105 border border-gray-800 rounded-2xl cursor-pointer gap-2 px-2 transition"
+              >
+                <FaLink className="w-5 h-5 text-white" />
+                <span className="text-white font-[Morabba-Regular]">
+                  كليك كنید
+                </span>
+              </a>
+              <span
+                className="text-white text-right font-[Morabba-Bold]"
+                dir="rtl"
+              >
+                تلگرام:
+              </span>
+              <FaTelegramPlane />
+            </div>
+
+            {/* Address */}
+            <div className="flex items-center justify-end gap-2 mt-8">
+              <span
+                className="text-white text-right font-[Morabba-Regular]"
+                dir="rtl"
+              >
+                تهران-خیابان نوفل لوشاتو - خیابان رازی - پلاک 27 - طبقه دوم -
+                واحد پنج
+              </span>
+              <span
+                className="text-white text-right font-[Morabba-Bold]"
+                dir="rtl"
+              >
+                آدرس:
+              </span>
+              <HiOutlineOfficeBuilding />
+            </div>
           </div>
         </div>
       </div>

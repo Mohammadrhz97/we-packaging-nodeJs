@@ -19,12 +19,12 @@ export default function page() {
       {/* Container for blog page */}
       <div className="max-w-[1024px] mx-auto pt-20">
         {/* Page heading */}
-        <div className="max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white text-4xl ">
+        <div className="max-w-full text-center mx-5 bg-white/5 backdrop-blur-xs shadow-[0_0_30px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white text-4xl ">
           <h1>مقاله ها</h1>
         </div>
 
         {/* Blog cards container */}
-        <div className="max-w-full mt-6 mx-5 bg-white/10 p-5 rounded-lg flex justify-center flex-wrap gap-6">
+        <div className="max-w-full mt-10 mx-5 bg-white/5 backdrop-blur-xs shadow-[0_0_30px_rgba(255,255,255,0.15)] p-5 rounded-lg flex justify-center flex-wrap gap-6">
           {/* Loop through blog contents */}
           {BlogContents.map((item) => (
             <Link href={`/blog/${item.id}`} key={item.id}>

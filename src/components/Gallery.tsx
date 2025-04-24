@@ -58,8 +58,8 @@ const Gallery: React.FC = () => {
   return (
     <>
       {/* Title section */}
-      <div className="flex justify-center mb-6">
-        <p className="w-2/3 text-center mb-8 text-2xl bg-white/10 p-3 rounded-2xl text-white md:text-xl ">
+      <div className="flex justify-center mb-6 ">
+        <p className="w-2/3 text-center mb-8 text-2xl shadow-[0_0_40px_rgba(255,255,255,0.15)] bg-white/10 p-3 rounded-2xl text-white md:text-xl ">
           گالری تصاویر
         </p>
       </div>

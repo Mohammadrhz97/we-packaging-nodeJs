@@ -57,7 +57,7 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
     >
       {/* Modal Container */}
       <div
-        className={`bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-lg w-[90%] max-w-md relative transition-opacity duration-300 ${
+        className={`bg-white/5 shadow-[0_0_30px_rgba(255,255,255,0.15)]  backdrop-blur-sm p-6 rounded-2xl  w-[90%] max-w-md relative transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0"
         }`}
         onClick={handleModalClick}
@@ -78,7 +78,7 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
 
           {/* Phone Section */}
           <div className="mt-8 flex flex-col">
-            <p className="text-white text-right text-md">:شماره تماس</p>
+            <p className="text-white text-right text-lg">:شماره تماس</p>
             <div className="flex justify-evenly flex-wrap">
               <a
                 href="tel:+989196017454"
@@ -99,7 +99,7 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
 
           {/* Social Section */}
           <div className="mt-8 flex flex-col">
-            <p className="text-white text-right text-md">:فضای مجازی</p>
+            <p className="text-white text-right">:فضای مجازی</p>
             <div className="flex justify-evenly flex-wrap">
               {/* WhatsApp */}
               <a
@@ -109,7 +109,7 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
                 className="flex items-center justify-between px-4 p-1 hover:scale-105 w-40 mt-4 border border-gray-800 rounded-2xl cursor-pointer gap-3 transition"
               >
                 <FaWhatsapp className="w-5 h-5 text-white" />
-                <span className="text-white text-lg">Whats App</span>
+                <span className="text-white text-lg">واتس اپ</span>
               </a>
 
               {/* Telegram */}
@@ -120,7 +120,7 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
                 className="flex items-center justify-between px-4 p-1 hover:scale-105 w-40 mt-4 border border-gray-800 rounded-2xl cursor-pointer gap-3 transition"
               >
                 <FaTelegramPlane className="w-5 h-5 text-white" />
-                <span className="text-white text-lg">Telegram</span>
+                <span className="text-white text-lg">تلگرام</span>
               </a>
 
               {/* Instagram */}
@@ -131,7 +131,7 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
                 className="flex items-center justify-between px-4 p-1 hover:scale-105 w-40 mt-4 border border-gray-800 rounded-2xl cursor-pointer gap-3 transition"
               >
                 <FaInstagram className="w-5 h-5 text-white" />
-                <span className="text-white text-lg">Instagram</span>
+                <span className="text-white text-lg">اینستاگرام</span>
               </a>
             </div>
           </div>

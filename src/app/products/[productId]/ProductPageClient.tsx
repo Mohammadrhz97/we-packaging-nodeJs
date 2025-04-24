@@ -29,18 +29,18 @@ export default function ProductPageClient({
     <div className="max-w-[1024px] pt-16 mx-auto">
       {/* Product title section */}
       <div
-        data-aos="fade-down"
-        className=" font-[Morabba-Bold] text-2xl  max-w-full text-center mx-5 bg-white/10 p-5 rounded-lg text-white"
+        // data-aos="fade-down"
+        className=" font-[Morabba-Bold] text-2xl  max-w-full text-center mx-5 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white backdrop-blur-xs"
       >
         <h1>{product.title}</h1>
       </div>
 
       {/* Product details and image section */}
-      <div className="max-w-full mx-5 grid grid-cols-12 mt-4 gap-4">
+      <div className="max-w-full mx-5 grid grid-cols-12 mt-10 gap-4">
         {/* Product image */}
         <div
-          data-aos="fade-right"
-          className="col-span-12 md:col-span-4 bg-white/10 p-5 rounded-lg relative w-full h-full flex justify-center items-center"
+          // data-aos="fade-right"
+          className="col-span-12 md:col-span-4 backdrop-blur-xs bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg relative w-full h-full flex justify-center items-center"
         >
           <div className="w-fit max-h-[300px] overflow-hidden relative rounded-3xl shadow-2xl flex justify-center items-center transition duration-200 ease-in-out hover:scale-105">
             <Image
@@ -56,8 +56,8 @@ export default function ProductPageClient({
 
         {/* Product details */}
         <div
-          data-aos="fade-left"
-          className="col-span-12 md:col-span-8 bg-white/10 p-5 rounded-lg relative"
+          // data-aos="fade-left"
+          className="col-span-12 md:col-span-8 backdrop-blur-xs bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg relative"
         >
           {/* Product icon */}
           <div className="absolute top-4 right-4 p-2">
@@ -105,8 +105,8 @@ export default function ProductPageClient({
 
       {/* Product description */}
       <div
-        data-aos="md:fade-up"
-        className="max-w-full mt-4 text-center mx-5 bg-white/10 p-5 rounded-lg text-white text-xl"
+        // data-aos="fade-up"
+        className="max-w-full mt-4 text-center mx-5 bg-white/5 backdrop-blur-xs shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white text-xl"
       >
         <h1 className="text-right font-[Morabba-Bold] text-xl md:text-2xl">
           {product?.description?.title}

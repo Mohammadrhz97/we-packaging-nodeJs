@@ -12,7 +12,13 @@ import Link from "next/link";
 
 const SwipperProductCards: React.FC = () => {
   return (
-    <div className="flex items-center justify-center flex-col h-[700px]">
+    <div className="flex items-center justify-center flex-col h-[700px] w-full">
+      {/* Title section */}
+      <div className="flex justify-center mb-6 w-full ">
+        <p className="w-2/3 text-center mb-8 text-2xl shadow-[0_0_40px_rgba(255,255,255,0.15)] bg-white/10 p-3 rounded-2xl text-white md:text-xl ">
+          محصولات
+        </p>
+      </div>
       <Swiper
         breakpoints={{
           // Different breakpoints for responsive design
