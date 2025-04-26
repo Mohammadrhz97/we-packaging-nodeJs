@@ -65,10 +65,14 @@ const Gallery: React.FC = () => {
       </div>
 
       {/* Image carousel using react-image-gallery */}
-      <ImageGallery
-        items={images}
-        lazyLoad={true} // Enable lazy loading for the images
-      />
+      <div className="touch-pan-y">
+        <ImageGallery
+          items={images}
+          lazyLoad={true} // Enable lazy loading for the images
+          disableSwipe={false} // Ensure swipe functionality is enabled
+          preventDefaultTouchmoveEvent={false}
+        />
+      </div>
     </>
   );
 };
