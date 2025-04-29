@@ -5,7 +5,7 @@ import Image from "next/image";
 // Dynamic import to load components lazily on client-side only
 import dynamic from "next/dynamic";
 
-import P3 from "../../../public/3.jpg";
+import P3 from "../../../../public/3.jpg";
 
 import { BsTelephoneInbound } from "react-icons/bs";
 import { FaWhatsapp, FaTelegramPlane, FaInstagram } from "react-icons/fa";

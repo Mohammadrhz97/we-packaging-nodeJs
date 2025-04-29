@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"] // Ensure your path mappings are correct (adjust `@/*` to match your directory structure)
+      "@/*": ["./src/*"], // Ensure your path mappings are correct (adjust `@/*` to match your directory structure)
+      "@payload-config": ["./payload.config.ts"]
     }
   },
   "include": [

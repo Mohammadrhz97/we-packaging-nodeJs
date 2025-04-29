@@ -5,7 +5,7 @@
 import { RxArrowTopRight } from "react-icons/rx";
 
 // Importing the data source containing the list of services/products
-import { ServiceData } from "../../constant/constants.index";
+import { ServiceData } from "../../../constant/constants.index";
 
 // Importing Next.js Link component for internal navigation
 import Link from "next/link";

@@ -116,6 +116,9 @@ function Navbar() {
             <Link href="/blog">بلاگ</Link>
           </li>
           <li className="p-5">
+            <Link href="/gallery">گالری </Link>
+          </li>
+          <li className="p-5">
             <Link href="/about">درباره ما</Link>
           </li>
         </ul>
@@ -154,6 +157,7 @@ function Navbar() {
             { label: "صفحه اصلی", href: "/" },
             { label: "محصولات", href: "/products" },
             { label: "بلاگ", href: "/blog" },
+            { label: "گالری", href: "/gallery" },
             { label: "درباره ما", href: "/about" },
           ].map(({ label, href }) => {
             const isProducts = href === "/products"; // Check if current link is products

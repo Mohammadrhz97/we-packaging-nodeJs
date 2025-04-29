@@ -1,8 +1,8 @@
-import { BlogContents } from "../../constant/blogContents.index";
+import { BlogContents } from "../../../constant/blogContents.index";
 import { Metadata } from "next";
 
 import Image from "next/image";
-import favicon from "../../../public/favicon.png";
+import favicon from "../../../../public/favicon.png";
 import Link from "next/link";
 
 // Define static metadata for the page (used in <head>)

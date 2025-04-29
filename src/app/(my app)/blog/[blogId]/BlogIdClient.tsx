@@ -1,7 +1,7 @@
 "use client";
 
 // Import static blog data
-import { BlogContents } from "../../../constant/blogContents.index";
+import { BlogContents } from "../../../../constant/blogContents.index";
 
 // Next.js image optimization
 import Image from "next/image";

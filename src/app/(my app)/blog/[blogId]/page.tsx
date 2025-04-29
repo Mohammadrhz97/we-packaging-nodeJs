@@ -1,4 +1,4 @@
-import { BlogContents } from "../../../constant/blogContents.index";
+import { BlogContents } from "../../../../constant/blogContents.index";
 import BlogIdClient from "./BlogIdClient";
 
 // This function dynamically generates metadata for the blog post page
