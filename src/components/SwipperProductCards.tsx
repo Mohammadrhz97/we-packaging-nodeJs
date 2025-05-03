@@ -54,7 +54,7 @@ const SwipperProductCards: React.FC = () => {
         }}
         mousewheel={true}
         modules={[FreeMode, Pagination, Mousewheel, Autoplay]}
-        className="max-w-[90%] xl:max-w-[80%] flex justify-center items-center"
+        className="max-w-[70%]  flex justify-center items-center"
       >
         {/* Iterate over ServiceData to generate product cards */}
         {ServiceData.map((item) => (

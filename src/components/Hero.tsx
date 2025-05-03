@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <Image src={P4} alt="Hero image2" height={620} width={620} />
             <Link href="/products">
-              <div className="absolute sm:hidden w-full top-10 backdrop-blur-xs h-16 flex justify-center items-center">
+              <div className="absolute sm:hidden w-full top-0 backdrop-blur-xs h-16 flex justify-center items-center">
                 <button className="backdrop-blur-xs flex items-center h-11 justify-center text-white text-xl gap-4 border border-black border-opacity-60 border-r-3 border-b-3 p-1 px-3 z-30 cursor-pointer">
                   <span>
                     <FiExternalLink className="w-4 h-4 text-white" />

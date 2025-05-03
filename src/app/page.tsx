@@ -4,7 +4,7 @@ import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import SwipperProductCards from "@/components/SwipperProductCards";
-import Video from "@/components/Video";
+import Video from "@/components/Gif";
 
 export default function Home() {
   return (
