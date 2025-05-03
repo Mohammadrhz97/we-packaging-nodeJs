@@ -24,10 +24,10 @@ export default function ProductListClient() {
         {ServiceData.map((item) => (
           // Link to individual product/service detail page using item.id
           <Link key={item.id} href={`/products/${item.id}`}>
-            <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[350px] w-[300px] overflow-hidden cursor-pointer">
+            <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[420px] w-[300px] overflow-hidden cursor-pointer">
               {/* Background image with slight blur */}
               <div
-                className="absolute inset-0 bg-cover bg-center blur-[2px]"
+                className="absolute inset-0 bg-cover bg-center blur-[4px]"
                 style={{
                   backgroundImage: `url(${item.backgroundImage.src})`,
                 }}
@@ -37,17 +37,17 @@ export default function ProductListClient() {
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50" />
 
               {/* Foreground content */}
-              <div className="relative flex flex-col ali">
+              <div className="relative flex flex-col">
                 {/* Icon associated with each item */}
                 <item.icon className="text-blue-600 group-hover:text-blue-400 w-[32px] h-[32px]" />
 
                 {/* Title of the service/product */}
-                <h1 className="text-2xl lg:text-3xl text-right backdrop-blur-md p-1 font-bold">
+                <h1 className="text-2xl lg:text-2xl [text-shadow:_2px_2px_3px_black] text-right backdrop-blur-md p-1 font-bold mt-3">
                   {item.title}
                 </h1>
 
                 {/* Short description text (positioned near bottom of card) */}
-                <p className="lg:text-[16px] opacity-60 text-[14px] text-right absolute mt-52 backdrop-blur-md">
+                <p className="lg:text-[16px] opacity-60 text-[14px] text-right absolute mt-64 backdrop-blur-md">
                   {item.content}
                 </p>
               </div>

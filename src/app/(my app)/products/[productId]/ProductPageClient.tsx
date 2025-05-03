@@ -26,7 +26,7 @@ export default function ProductPageClient({
   }
 
   return (
-    <div className="max-w-[1024px] pt-16 mx-auto">
+    <div className="max-w-[1024px] pt-19 mx-auto">
       {/* Product title section */}
       <div
         // data-aos="fade-down"
@@ -36,7 +36,7 @@ export default function ProductPageClient({
       </div>
 
       {/* Product details and image section */}
-      <div className="max-w-full mx-5 grid grid-cols-12 mt-10 gap-4">
+      <div className="max-w-full mx-5 grid grid-cols-12 mt-6 gap-6">
         {/* Product image */}
         <div
           // data-aos="fade-right"
@@ -106,7 +106,7 @@ export default function ProductPageClient({
       {/* Product description */}
       <div
         // data-aos="fade-up"
-        className="max-w-full mt-4 text-center mx-5 bg-white/5 backdrop-blur-xs shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white text-xl"
+        className="max-w-full mt-6 text-center mx-5 bg-white/5 backdrop-blur-xs shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white text-xl"
       >
         <h1 className="text-right font-[Morabba-Bold] text-xl md:text-2xl">
           {product?.description?.title}

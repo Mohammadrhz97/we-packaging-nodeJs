@@ -77,7 +77,7 @@ const Gallery: React.FC = () => {
                 </div>
 
                 {/* Blog text content */}
-                <div className="w-full p-3 text-center backdrop-blur-sm text-2xl text-white/50 mt-8 ">
+                <div className="w-full p-3 [text-shadow:_2px_2px_3px_black] text-center backdrop-blur-sm text-2xl text-white/50 mt-8 ">
                   Out Of Space
                 </div>
                 {/* Footer with favicon and post date */}
@@ -118,7 +118,7 @@ const Gallery: React.FC = () => {
                 </div>
 
                 {/* Blog text content */}
-                <div className="w-full p-3 text-center backdrop-blur-sm text-2xl text-white/50 mt-8 ">
+                <div className="w-full p-3 [text-shadow:_2px_2px_3px_black] text-center backdrop-blur-sm text-2xl text-white/50 mt-8 ">
                   Rooted In The Earh
                 </div>
                 <div className="w-full relative flex flex-col mt-44 font-[Morabba-Regular]">
@@ -155,7 +155,7 @@ const Gallery: React.FC = () => {
                 </div>
 
                 {/* Blog text content */}
-                <div className="w-full p-3 text-center backdrop-blur-sm text-2xl text-white/50 mt-8 ">
+                <div className="w-full p-3 [text-shadow:_2px_2px_3px_black] text-center backdrop-blur-sm text-2xl text-white/50 mt-8 ">
                   Inception
                 </div>
                 <div className="w-full px-3 relative flex flex-col mt-44 font-[Morabba-Regular]">

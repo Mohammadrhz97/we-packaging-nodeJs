@@ -73,9 +73,9 @@ const SwipperProductCards: React.FC = () => {
                 {/* Content section */}
                 <div className="relative flex flex-col gap-3">
                   {/* Product icon */}
-                  <item.icon className="text-blue-600 group-hover:text-blue-400 w-[32px] h-[32px]" />
+                  <item.icon className="text-[#0F2542] group-hover:text-blue-400 w-[32px] h-[32px]" />
                   {/* Product title */}
-                  <h1 className="text-3xl lg:text-4xl text-right backdrop-blur-md p-1 rounded-xl shadow-2xl shadow-black">
+                  <h1 className="text-3xl lg:text-4xl [text-shadow:_2px_2px_3px_black] text-right backdrop-blur-md p-1 rounded-xl shadow-2xl shadow-black">
                     {item.title}
                   </h1>
                   {/* Product description */}
