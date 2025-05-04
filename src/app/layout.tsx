@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "وی پکیجینگ",
     images: [
       {
-        url: "/gallery/out-of-space/images/2.jpg",
+        url: "/openGraph.jpg",
         width: 1200,
         height: 630,
       },
