@@ -80,18 +80,6 @@ export default function InceptionProjectClient() {
       originalAlt: "image12",
       thumbnailAlt: "image12",
     },
-    {
-      original: "/gallery/inception/images/13.jpg",
-      thumbnail: "/gallery/inception/images/13.jpg",
-      originalAlt: "image13",
-      thumbnailAlt: "image13",
-    },
-    {
-      original: "/gallery/inception/images/14.jpg",
-      thumbnail: "/gallery/inception/images/14.jpg",
-      originalAlt: "image14",
-      thumbnailAlt: "image14",
-    },
   ];
 
   return (
@@ -110,7 +98,7 @@ export default function InceptionProjectClient() {
 
       <div className="w-[90%] md:w-[70%] m-14 mx-auto mt-32 shadow-[0_0_40px_rgba(255,255,255,0.15)] rounded-2xl overflow-hidden">
         <ReactPlayer
-          url="/gallery/project3/video/WeVideo.mp4"
+          url="/gallery/inception/video/inception.mp4"
           controls={true}
           width="100%"
           height="100%"

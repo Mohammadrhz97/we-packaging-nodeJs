@@ -74,7 +74,7 @@ export default function RootedInTheEarhClient() {
 
       <div className="w-[90%] md:w-[70%] m-14 mx-auto mt-32 shadow-[0_0_40px_rgba(255,255,255,0.15)] rounded-2xl overflow-hidden">
         <ReactPlayer
-          url="/gallery/project3/video/WeVideo.mp4"
+          url="/gallery/out-of-space/video/WeVideo.mp4"
           controls={true}
           width="100%"
           height="100%"

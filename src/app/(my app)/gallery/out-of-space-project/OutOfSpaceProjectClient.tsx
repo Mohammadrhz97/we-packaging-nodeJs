@@ -44,6 +44,30 @@ export default function OutOfSpaceProjectClient() {
       originalAlt: "image6",
       thumbnailAlt: "image6",
     },
+    {
+      original: "/gallery/out-of-space/images/7.jpg",
+      thumbnail: "/gallery/out-of-space/images/7.jpg",
+      originalAlt: "image7",
+      thumbnailAlt: "image7",
+    },
+    {
+      original: "/gallery/out-of-space/images/8.jpg",
+      thumbnail: "/gallery/out-of-space/images/8.jpg",
+      originalAlt: "image8",
+      thumbnailAlt: "image8",
+    },
+    {
+      original: "/gallery/out-of-space/images/9.jpg",
+      thumbnail: "/gallery/out-of-space/images/9.jpg",
+      originalAlt: "image9",
+      thumbnailAlt: "image9",
+    },
+    {
+      original: "/gallery/out-of-space/images/10.jpg",
+      thumbnail: "/gallery/out-of-space/images/10.jpg",
+      originalAlt: "image10",
+      thumbnailAlt: "image10",
+    },
   ];
 
   return (

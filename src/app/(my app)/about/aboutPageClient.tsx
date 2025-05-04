@@ -23,12 +23,12 @@ export default function AboutPageClient() {
   return (
     <div className="max-w-[1024px] mx-auto pt-20">
       {/* Page title section */}
-      <div className="max-w-full text-center mx-5 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white text-4xl">
+      <div className="max-w-full text-center bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white text-4xl">
         <h1>درباره بنیان‌گذاران وی</h1>
       </div>
 
       {/* Gallery section showing founders' images */}
-      <div className="max-w-full mt-10 mx-5 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg flex justify-center">
+      <div className="max-w-full mt-6 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg flex justify-center">
         <Image
           src={P3}
           alt="founderImage"
@@ -39,7 +39,7 @@ export default function AboutPageClient() {
       </div>
 
       {/* Biographical content section */}
-      <div className="mt-6 max-w-full items-center justify-end mx-5 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg">
+      <div className="mt-6 max-w-full items-center justify-end bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg">
         <p
           className="text-white text-right mb-4 font-[Morabba-Regular] text-xl md:text-2xl"
           dir="rtl"
@@ -84,14 +84,14 @@ export default function AboutPageClient() {
       </div>
 
       {/* Contact info and location map section */}
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Map showing business location */}
-        <div className="flex justify-center items-center text-white mx-5 mt-6 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg">
+        <div className="flex justify-center items-center text-white  mt-6 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg">
           <MapComponent />
         </div>
 
         {/* Contact details section */}
-        <div className="flex flex-col justify-start text-white mx-5 mt-6 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg">
+        <div className="flex flex-col justify-start text-white  mt-6 bg-white/5 shadow-[0_0_20px_rgba(255,255,255,0.15)] p-5 rounded-lg">
           <p className="text-white text-right font-[Morabba-Bold]" dir="rtl">
             راه های ارتباطی:
           </p>
