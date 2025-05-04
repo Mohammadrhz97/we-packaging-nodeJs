@@ -7,15 +7,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const productsUrl = ServiceData.map((product) => ({
     url: `${domain}/products/${product.id}`,
   }));
-  const blogUrl = BlogContents.map((product) => ({
-    url: `${domain}/blog/${product.id}`,
+  const blogUrl = BlogContents.map((blog) => ({
+    url: `${domain}/blog/${blog.id}`,
   }));
-  console.log(productsUrl);
 
   return [
     { url: `${domain}/products` },
     { url: `${domain}/blog` },
     { url: `${domain}/about` },
+    { url: `${domain}/gallery` },
+    { url: `${domain}/gallery/our-of-space-project` },
+    { url: `${domain}/gallery/rooted-in-the-earth-project` },
+    { url: `${domain}/gallery/inception-project` },
+    { url: `${domain}/developer-service` },
     ...productsUrl,
     ...blogUrl,
   ];

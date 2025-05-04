@@ -58,7 +58,7 @@ export default function page() {
           {/* rooted in the earh project */}
 
           <Link
-            href={`/gallery/rooted-in-the-earh-project`}
+            href={`/gallery/rooted-in-the-earth-project`}
             key={"rooted-in-the-earh-project"}
           >
             <div className="flex flex-col gap-6 backdrop-blur-sm group relative shadow-lg text-white rounded-xl  py-8 h-[360px] w-[265px] overflow-hidden cursor-pointer mx-auto">
