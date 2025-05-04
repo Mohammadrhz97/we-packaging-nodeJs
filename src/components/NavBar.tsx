@@ -112,6 +112,13 @@ function Navbar() {
             </div>
           </li>
 
+          <li className="p-5 relative">
+            <Link href="/developer-service">خدمات سایت</Link>
+
+            <span className="absolute top-3 right-23 bg-red-500 text-white text-[10px] font-bold px-2 rounded-full flex justify-center items-center">
+              <p className="text-center">جدید</p>
+            </span>
+          </li>
           <li className="p-5">
             <Link href="/blog">بلاگ</Link>
           </li>
@@ -156,11 +163,13 @@ function Navbar() {
           {[
             { label: "صفحه اصلی", href: "/" },
             { label: "محصولات", href: "/products" },
+            { label: "خدمات سایت", href: "/developer-service" },
             { label: "بلاگ", href: "/blog" },
             { label: "گالری", href: "/gallery" },
             { label: "درباره ما", href: "/about" },
           ].map(({ label, href }) => {
             const isProducts = href === "/products"; // Check if current link is products
+            const isNewService = href === "/developer-service";
             return (
               <li
                 key={href}
@@ -206,6 +215,11 @@ function Navbar() {
                     onClick={() => setNav(false)}
                   >
                     {label}
+                    {isNewService && (
+                      <span className="absolute top-0 right-20 bg-red-500 text-white text-[10px] font-bold p-1 px-2 rounded-full flex justify-center items-center">
+                        <p className="text-center">جدید</p>
+                      </span>
+                    )}
                   </Link>
                 )}
                 <span className="absolute bottom-0  h-[1px] bg-gray-600 transition-all duration-300 w-full left-0"></span>
