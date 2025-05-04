@@ -11,6 +11,22 @@ export const metadata: Metadata = {
   title: "WE Packaging",
   description:
     "به وی پکیجینگ خوش آمدید! ما ارائه‌دهنده بهترین محصولات و خدمات در زمینه توسعه برند و پکیجینگ هستیم. با خرید از ما، کیفیت و رضایت را تجربه کنید. از مجموعه متنوع محصولات و پیشنهادات ویژه‌مان بازدید کنید.",
+  openGraph: {
+    title: " وی پکیجینگ",
+    description:
+      "به وی پکیجینگ خوش آمدید! ما ارائه‌دهنده بهترین محصولات و خدمات در زمینه توسعه برند و پکیجینگ هستیم. با خرید از ما، کیفیت و رضایت را تجربه کنید. از مجموعه متنوع محصولات و پیشنهادات ویژه‌مان بازدید کنید.",
+    url: "https://wepackaging.co/d",
+    siteName: "وی پکیجینگ",
+    images: [
+      {
+        url: "/gallery/out-of-space/2.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "fa_IR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
