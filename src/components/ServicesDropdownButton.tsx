@@ -20,15 +20,14 @@ function ServicesDropdownButton({
 
   return (
     <li className="flex items-center justify-end relative group">
-      {/* Conditionally render the badge if it's the "طراحی سایت" button */}
-      {label === "طراحی سایت" && (
-        <span className="absolute top-0 right-20 bg-red-500 text-white text-[10px] font-bold px-2 p-1 rounded-full leading-none z-20">
-          جدید
-        </span>
-      )}
-
       <Link href={href || "#"} className="w-full">
         <button className={buttonClasses} type="button">
+          {/* Conditionally render the badge if it's the "طراحی سایت" button */}
+          {label === "طراحی سایت" && (
+            <span className="absolute top-0 right-20 bg-red-500 text-white text-[10px] font-bold px-2 p-1 rounded-full leading-none z-20">
+              جدید
+            </span>
+          )}
           {label === "پکیجینگ" && (
             <div className="absolute top-0 right-53 ">
               <PackagingServices />

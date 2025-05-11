@@ -7,8 +7,8 @@ const Background: React.FC = () => {
       <Image
         src={starSky}
         alt="Background Image"
-        layout="fill"
-        objectFit="cover"
+        fill
+        className="object-cover"
         priority
       />
     </div>

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import DeveloperServiceClient from "./developerServiceClient";
+import DeveloperServiceClient from "./brandManagingClient";
 
 // SEO Metadata for the About page — used by Next.js to generate <head> info
 export const metadata: Metadata = {
@@ -25,6 +25,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DeveloperService() {
+export default function AboutPage() {
   return <DeveloperServiceClient />;
 }

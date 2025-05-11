@@ -70,10 +70,9 @@ function Navbar() {
         style={{ fontFamily: "Morabba-Regular" }}
         className="text-white flex justify-between items-center mx-auto h-14 px-4 text-1 fixed w-full backdrop-blur-sm border-b border-gray-800 z-40"
       >
-        {" "}
         {/* Brand Logo */}
         <Link href="/">
-          <div className="w-16">
+          <div className="md:w-16 w-12">
             <Image
               src={weLogo}
               height={0}
@@ -226,7 +225,7 @@ function Navbar() {
 
                         <li key="branding">
                           <Link
-                            href={"/products"}
+                            href={"/brand-managing"}
                             className="block border-b border-b-gray-500 pb-2"
                             onClick={() => {
                               setNav(false);

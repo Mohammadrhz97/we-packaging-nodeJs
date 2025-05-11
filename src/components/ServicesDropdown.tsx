@@ -7,7 +7,7 @@ function ServicesDropdown() {
         <ServicesDropdownButton href="/products" label="پکیجینگ">
           پکیجینگ
         </ServicesDropdownButton>
-        <ServicesDropdownButton href="/products">
+        <ServicesDropdownButton href="/brand-managing">
           برندینگ
         </ServicesDropdownButton>
         <ServicesDropdownButton href="/developer-service" label="طراحی سایت">
