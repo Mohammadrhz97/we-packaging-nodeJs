@@ -80,10 +80,10 @@ export default function BrandManagingClient() {
         <h2 className="md:text-2xl text-lg font-bold mt-4">چه کار می‌کنیم؟</h2>
         <ul className="list-disc pr-5 text-white space-y-4 text-md mt-3 text-justify">
           <li>
-            <span className="font-bold underline">تحلیل عمیق برند:</span> کشف
-            DNA برند، تحلیل رقبا و تعیین جایگاه منحصربه‌فرد در بازار ساخت هویت
-            کلامی و بصری: طراحی لوگو، پالت رنگ، تایپوگرافی، صدای برند، داستان
-            برند
+            <span className="font-bold underline ml-2">تحلیل عمیق برند:</span>{" "}
+            کشف DNA برند، تحلیل رقبا و تعیین جایگاه منحصربه‌فرد در بازار ساخت
+            هویت کلامی و بصری: طراحی لوگو، پالت رنگ، تایپوگرافی، صدای برند،
+            داستان برند
           </li>
           <li>
             <span className="font-bold underline ml-2">
@@ -92,7 +92,9 @@ export default function BrandManagingClient() {
             کارت ویزیت، بسته‌بندی، ایمیل، لباس سازمانی، پروفایل دیجیتال و...
           </li>
           <li>
-            <span className="font-bold underline">راهنمای جامع برندینگ: </span>
+            <span className="font-bold underline ml-2">
+              راهنمای جامع برندینگ:{" "}
+            </span>
             طراحی مستنداتی برای اجرای صحیح برند در فضای واقعی و دیجیتال
           </li>
         </ul>

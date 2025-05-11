@@ -27,7 +27,7 @@ export default function ProductListClient() {
             <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[420px] w-[300px] overflow-hidden cursor-pointer">
               {/* Background image with slight blur */}
               <div
-                className="absolute inset-0 bg-cover bg-center blur-[4px]"
+                className="absolute inset-0 bg-cover bg-center blur-[2px]"
                 style={{
                   backgroundImage: `url(${item.backgroundImage.src})`,
                 }}
