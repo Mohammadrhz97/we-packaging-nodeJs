@@ -13,7 +13,7 @@ import Link from "next/link";
 // Functional component that renders a grid of product/service cards
 export default function ProductListClient() {
   return (
-    <div className="max-w-[1024px] mx-auto">
+    <div className="max-w-[1024px] mx-auto pt-26">
       {/* Page header */}
       <div className="max-w-full text-center mx-5 bg-white/5 backdrop-blur-xs shadow-[0_0_30px_rgba(255,255,255,0.15)] p-5 rounded-lg text-white text-4xl">
         <h1>محصولات</h1>
