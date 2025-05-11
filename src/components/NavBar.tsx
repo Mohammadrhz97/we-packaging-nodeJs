@@ -241,7 +241,7 @@ function Navbar() {
                             جدید
                           </span>
                           <Link
-                            href={"/products"}
+                            href={"/developer-service"}
                             className="block pb-2"
                             onClick={() => {
                               setNav(false);
