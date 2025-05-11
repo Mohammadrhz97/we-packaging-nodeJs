@@ -44,7 +44,7 @@ const FAQ: React.FC = () => {
             onClick={() => toggle(index)}
             className="flex items-center justify-between w-full py-5 md:text-lg text-sm text-left text-gray-100"
           >
-            <span>{faq.question}</span>
+            <span className="text-right">{faq.question}</span>
             <svg
               className={`w-3 h-3 transform transition-transform ${
                 openIndex === index ? "rotate-180" : ""
