@@ -31,7 +31,12 @@ const MapComponent: React.FC = () => {
     <MapContainer
       center={position}
       zoom={20}
-      style={{ height: "340px", width: "80%", borderRadius: "8px" }}
+      style={{
+        height: "340px",
+        width: "80%",
+        borderRadius: "8px",
+        zIndex: "0",
+      }}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={position}>

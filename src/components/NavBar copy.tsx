@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { SlArrowDown } from "react-icons/sl";
 import Calling from "../../public/Calling.gif";
-import ServicesDropdown from "./ServicesDropdown";
+import ProductsDropdown from "./ServicesDropdown";
 import Link from "next/link";
 import ModalPage from "./ModalPage";
 import weLogo from "../../public/weLogo.png";
@@ -17,7 +17,6 @@ function Navbar() {
   const [open, setOpen] = useState<boolean>(false); // Controls the product dropdown state
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // Controls the modal for contact
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<boolean>(false); // Controls the mobile dropdown for products
-  const [packagingDropdownOpen, setPackagingDropdownOpen] = useState(false);
 
   // References for handling outside clicks
   const navRef = useRef<HTMLDivElement>(null); // Ref for the mobile navigation menu
@@ -94,7 +93,7 @@ function Navbar() {
             onMouseEnter={() => setOpen(true)} // Open dropdown on hover
             className="p-5 flex flex-row-reverse items-center gap-1 relative"
           >
-            <Link href="/products">خدمات</Link>
+            <Link href="/products">محصولات</Link>
             <span>
               <SlArrowDown className="w-3 h-3 text-white" />
             </span>
@@ -107,10 +106,18 @@ function Navbar() {
             >
               {open && (
                 <div className="absolute top-full left-0 w-64 z-50">
-                  <ServicesDropdown /> {/* Render dropdown content */}
+                  <ProductsDropdown /> {/* Render dropdown content */}
                 </div>
               )}
             </div>
+          </li>
+
+          <li className="p-5 relative">
+            <Link href="/developer-service">خدمات سایت</Link>
+
+            <span className="absolute top-3 right-23 bg-red-500 text-white text-[10px] font-bold px-2 rounded-full flex justify-center items-center">
+              <p className="text-center">جدید</p>
+            </span>
           </li>
           <li className="p-5">
             <Link href="/blog">بلاگ</Link>
@@ -155,23 +162,25 @@ function Navbar() {
           {/* Navigation Links */}
           {[
             { label: "صفحه اصلی", href: "/" },
-            { label: "خدمات", href: "/products" },
+            { label: "محصولات", href: "/products" },
+            { label: "خدمات سایت", href: "/developer-service" },
             { label: "بلاگ", href: "/blog" },
             { label: "گالری", href: "/gallery" },
             { label: "درباره ما", href: "/about" },
           ].map(({ label, href }) => {
             const isProducts = href === "/products"; // Check if current link is products
+            const isNewService = href === "/developer-service";
             return (
               <li
                 key={href}
-                className="group text-lg relative p-2 overflow-hidden cursor-pointer w-full"
+                className="group text-sm relative p-2 overflow-hidden cursor-pointer w-full"
                 ref={isProducts ? mobileDropdownRef : null} // Add ref for products dropdown
               >
                 {isProducts ? (
                   <>
                     <button
                       onClick={() => setMobileDropdownOpen((prev) => !prev)} // Toggle mobile dropdown for products
-                      className="flex items-center text-white w-full justify-end gap-1 text-lg"
+                      className="flex items-center text-white w-full justify-end gap-1 text-sm"
                     >
                       <SlArrowDown className="w-3 h-3 text-white mr-2" />
                       {label}
@@ -180,78 +189,22 @@ function Navbar() {
                     {/* Dropdown items (conditionally rendered) */}
                     {mobileDropdownOpen && (
                       <ul className="mt-2 pr-3 space-y-1 text-white text-sm ">
-                        <li key="packaging" className="relative">
-                          <button
-                            onClick={() =>
-                              setPackagingDropdownOpen((prev) => !prev)
-                            }
-                            className="flex items-center justify-end w-full gap-1 border-b border-b-gray-500 pb-2"
-                          >
-                            <SlArrowDown className="w-3 h-3 text-white mr-2" />
-                            پکیجینگ
-                          </button>
-
-                          {packagingDropdownOpen && (
-                            <ul className="mt-2 pr-3 space-y-1 text-white text-sm">
-                              <li key="all-products">
-                                <Link
-                                  href={`/products`}
-                                  className="block border-b border-b-gray-500 pb-2 pt-2"
-                                  onClick={() => {
-                                    setNav(false);
-                                    setMobileDropdownOpen(false);
-                                  }}
-                                >
-                                  همه محصولات
-                                </Link>
-                              </li>
-                              {ServiceData.map((item) => (
-                                <li key={item.id}>
-                                  <Link
-                                    href={`/products/${item.id}`}
-                                    className="block border-b border-b-gray-500 pb-2"
-                                    onClick={() => {
-                                      setNav(false);
-                                      setMobileDropdownOpen(false);
-                                      setPackagingDropdownOpen(false);
-                                    }}
-                                  >
-                                    {item.title}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </li>
-
-                        <li key="branding">
-                          <Link
-                            href={"/products"}
-                            className="block border-b border-b-gray-500 pb-2"
-                            onClick={() => {
-                              setNav(false);
-                              setMobileDropdownOpen(false);
-                            }}
-                          >
-                            برندینگ
-                          </Link>
-                        </li>
-
-                        <li key="web-design" className="relative">
-                          <span className="absolute top-0 right-18 bg-red-500 text-white text-[10px] font-bold px-2 p-1 rounded-full leading-none z-20">
-                            جدید
-                          </span>
-                          <Link
-                            href={"/products"}
-                            className="block pb-2"
-                            onClick={() => {
-                              setNav(false);
-                              setMobileDropdownOpen(false);
-                            }}
-                          >
-                            طراحی سایت
-                          </Link>
-                        </li>
+                        <Link
+                          href={`/products`}
+                          className="block border-b border-b-gray-500 pb-2 pt-2"
+                        >
+                          همه محصولات
+                        </Link>
+                        {ServiceData.map((item) => (
+                          <li key={item.id} onClick={() => setNav(!nav)}>
+                            <Link
+                              href={`/products/${item.id}`}
+                              className="block border-b border-b-gray-500 pb-2"
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     )}
                   </>
@@ -262,9 +215,14 @@ function Navbar() {
                     onClick={() => setNav(false)}
                   >
                     {label}
+                    {isNewService && (
+                      <span className="absolute top-0 right-20 bg-red-500 text-white text-[10px] font-bold p-1 px-2 rounded-full flex justify-center items-center">
+                        <p className="text-center">جدید</p>
+                      </span>
+                    )}
                   </Link>
                 )}
-                <span className="absolute bottom-0 h-[1px] bg-gray-600 transition-all duration-300 w-full left-0"></span>
+                <span className="absolute bottom-0  h-[1px] bg-gray-600 transition-all duration-300 w-full left-0"></span>
               </li>
             );
           })}
