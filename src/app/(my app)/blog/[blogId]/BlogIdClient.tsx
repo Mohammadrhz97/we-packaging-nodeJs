@@ -64,13 +64,13 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
             className="bg-white/5 backdrop-blur-xs shadow-[0_0_30px_rgba(255,255,255,0.15)] p-5 rounded-lg w-full h-full"
           >
             {/* Blog image with hover zoom effect */}
-            <div className="w-[600px] overflow-hidden relative rounded-3xl shadow-2xl mx-auto transition duration-200 ease-in-out hover:scale-105">
+            <div className="w-full max-w-[600px] overflow-hidden relative rounded-3xl shadow-2xl mx-auto transition duration-200 ease-in-out hover:scale-105">
               <Image
                 src={blog.image}
                 alt={blog.id}
                 width={1400}
-                height={800}
-                className="h-[450px] w-auto"
+                height={800} // Keep the original ratio
+                className="w-full h-auto rounded-3xl object-cover"
                 priority
               />
             </div>
@@ -98,12 +98,12 @@ export default function BlogIdClient({ blogId }: { blogId: string }) {
         {/* Contact info and location map section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Map showing business location */}
-          <div className="flex justify-center items-center text-white mx-5 mt-6 bg-white/10 p-5 rounded-lg">
+          <div className="flex justify-center items-center text-white mx-5 mt-6 bg-white/5 backdrop-blur-xs shadow-[0_0_30px_rgba(255,255,255,0.15)] p-5 rounded-lg">
             <MapComponent />
           </div>
 
           {/* Contact details section */}
-          <div className="flex flex-col justify-start text-white mx-5 mt-6 bg-white/10 p-5 rounded-lg">
+          <div className="flex flex-col justify-start text-white mx-5 mt-6 bg-white/5 backdrop-blur-xs shadow-[0_0_30px_rgba(255,255,255,0.15)] p-5 rounded-lg">
             <p className="text-white text-right font-[Morabba-Bold]" dir="rtl">
               راه های ارتباطی:
             </p>
