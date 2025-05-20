@@ -88,11 +88,11 @@ const ModalPage: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
                 <span className="text-white text-lg">۰۹۱۹۶۰۱۷۴۵۴</span>
               </a>
               <a
-                href="tel:021555555"
+                href="tel:02165021226"
                 className="flex items-center justify-between px-4 p-1 hover:scale-105 w-40 mt-4 border border-gray-800 rounded-2xl cursor-pointer gap-3 transition"
               >
                 <GiRotaryPhone className="w-5 h-5 text-white" />
-                <span className="text-white text-lg">۰۲۱ *******</span>
+                <span className="text-white text-lg">۰۲۱-۶۵۰۲۱۲۲۶</span>
               </a>
             </div>
           </div>
