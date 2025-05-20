@@ -3,7 +3,6 @@ import DeveloperServiceClient from "./brandManagingClient";
 
 // SEO Metadata for the About page — used by Next.js to generate <head> info
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wepackaging.co"),
   title: "خدمات برندینگ",
   description:
     "در استودیو وی، برندسازی فقط طراحی لوگو نیست؛ ما از درون هر کسب‌وکار آغاز می‌کنیم تا با کشف هویت، شخصیت و داستان برند، یک هویت بصری و کلامی ماندگار بسازیم.",
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "وی پکیجینگ",
     images: [
       {
-        url: "/brand-managing.jpg",
+        url: "/blogImages/brand-managing.jpg",
         width: 1200,
         height: 630,
       },
