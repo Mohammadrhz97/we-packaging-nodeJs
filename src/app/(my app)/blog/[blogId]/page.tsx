@@ -25,7 +25,7 @@ export async function generateMetadata({
       siteName: "وی پکیجینگ",
       images: [
         {
-          url: `/${product?.image}.jpg`,
+          url: `${product?.image}`,
           width: 1200,
           height: 630,
         },
