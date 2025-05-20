@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "وی پکیجینگ",
     images: [
       {
-        url: "/blogImages/developer-service.png",
+        url: "https://wepackaging.co/brand-managing.jpg",
         width: 1200,
         height: 630,
       },
